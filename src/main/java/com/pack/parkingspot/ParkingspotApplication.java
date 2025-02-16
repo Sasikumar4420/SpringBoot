@@ -21,24 +21,24 @@ import com.pack.parkingspot.repository.ParkingSlotsRepository;
 @EnableScheduling
 @EnableAutoConfiguration
 @SpringBootApplication
-public class ParkingspotApplication implements CommandLineRunner{
+public class ParkingspotApplication{
 
 	public static void main(String[] args) {
 		SpringApplication.run(ParkingspotApplication.class, args);
 	}
-	
+
 	@Autowired
 	ParkingSlotsRepository parkingSlotRepo;
 	@Autowired
 	EmployeeRepository empRepo;
-	@Override
+	/*@Override
 	public void run(String... args) throws Exception {
 //		saveParkingSpots();
 //		saveEmployee();
 		
-	}
+	}*/
 
-	private void saveEmployee() {
+	/*private void saveEmployee() {
 		// TODO Auto-generated method stub
 		List<Employee> empList=new ArrayList<>();
 		empList.add(new Employee(1007l,"komal","Developer",LocalDate.of(2024, 10, 10),null));
@@ -73,7 +73,9 @@ public class ParkingspotApplication implements CommandLineRunner{
 //		parkingSlotsList.add(new ParkingSlots(19,"Tower-4",4,CheckAvailability.NotAvailable));
 //		parkingSlotsList.add(new ParkingSlots(20,"Tower-4",5,CheckAvailability.NotAvailable));
 		parkingSlotRepo.saveAll(parkingSlotsList);
-	}
+	}/*
 	
 
+
+	 */
 }
