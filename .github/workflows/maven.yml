@@ -32,12 +32,12 @@ jobs:
     - name: Build and push Docker image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image:parkingspot/springboot-image
-      tags: latest
-      registry: docker.io
-      dockerfile: Docker
-      username: ${{ secrets.DOCKER_USERNAME }}
-      password: ${{ secrets.DOCKER_PASSWORD }}
+        image: SpringBoot/springboot-image
+        tags: latest
+        registry: docker.io
+        dockerfile: Docker
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
 
 
 
